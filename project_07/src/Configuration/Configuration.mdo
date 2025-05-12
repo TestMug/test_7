@@ -35,5 +35,6 @@
     <languageCode>ru</languageCode>
   </languages>
   <catalogs>Catalog.Товары</catalogs>
+  <catalogs>Catalog.Справочник</catalogs>
   <documents>Document.Продажи</documents>
 </mdclass:Configuration>
