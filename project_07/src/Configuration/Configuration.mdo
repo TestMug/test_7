@@ -37,6 +37,7 @@
   <commonModules>CommonModule.РаботаСБД</commonModules>
   <commonModules>CommonModule.Интеграция</commonModules>
   <catalogs>Catalog.Товары</catalogs>
+  <catalogs>Catalog.Справочник</catalogs>
   <documents>Document.Продажи</documents>
   <enums>Enum.Перечисление1</enums>
   <dataProcessors>DataProcessor.ОбработкаТест</dataProcessors>
