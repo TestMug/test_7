@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mdclass:AccumulationRegister xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aggregates="http://g5.1c.ru/v8/dt/aggregates" xmlns:core="http://g5.1c.ru/v8/dt/mcore" xmlns:mdclass="http://g5.1c.ru/v8/dt/metadata/mdclass" uuid="6a70f6cb-05e3-4844-a017-2226316e78d0">
+  <producedTypes>
+    <selectionType typeId="81b1e323-19da-445b-9cea-65c702fbfad8" valueTypeId="4768b0c0-8a02-472f-ad4d-76340e4ecab6"/>
+    <listType typeId="1636211b-b527-49df-ae20-b9433ed2dd63" valueTypeId="943292a3-3e44-4fd3-a3d1-880b36dbf58e"/>
+    <managerType typeId="4ebe2aef-81c0-4423-b8e1-5eb02b6a85d5" valueTypeId="1c32aa9c-355c-46c1-95b3-3ffc2d21bc9c"/>
+    <recordSetType typeId="c5e9b54b-ee77-4584-ba08-a2eb6d5dba5d" valueTypeId="efd95e72-72e2-4e60-8229-84860c0dfe11"/>
+    <recordKeyType typeId="5b4fcdc2-5756-4d2d-9a1b-32fee2f1854e" valueTypeId="40d64206-0838-4731-bc44-5774eb9f2a5a"/>
+    <recordType typeId="856b5e0a-5d5f-4c06-b5a2-4f7cf27eebfe" valueTypeId="663fc1fa-62cf-4b6a-8cdc-e690291a6084"/>
+  </producedTypes>
+  <name>Продажи</name>
+  <synonym>
+    <key>ru</key>
+    <value>Продажи</value>
+  </synonym>
+  <useStandardCommands>true</useStandardCommands>
+  <registerType>Turnovers</registerType>
+  <includeHelpInContents>true</includeHelpInContents>
+  <help>
+    <pages>
+      <lang>ru</lang>
+    </pages>
+  </help>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Active</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>LineNumber</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Recorder</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <standardAttributes>
+    <dataHistory>Use</dataHistory>
+    <name>Period</name>
+    <fillValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+  </standardAttributes>
+  <dataLockControlMode>Managed</dataLockControlMode>
+  <enableTotalsSplitting>true</enableTotalsSplitting>
+  <aggregates xsi:type="aggregates:AccumulationRegisterAggregates">
+    <aggregates id="b309b8a5-8fe5-4cc4-b1b6-4db218dbdb56">
+      <periodicity>Auto</periodicity>
+      <dimensions>AccumulationRegister.Продажи.Dimension.Покупатель</dimensions>
+    </aggregates>
+    <aggregates id="db2da9ec-4c6c-4ce4-be7a-cf1da89003c2">
+      <periodicity>Auto</periodicity>
+      <dimensions>AccumulationRegister.Продажи.Dimension.Товар</dimensions>
+    </aggregates>
+  </aggregates>
+  <listPresentation>
+    <key>ru</key>
+    <value>Регистр продаж</value>
+  </listPresentation>
+  <explanation>
+    <key>ru</key>
+    <value>Регистр продаж контрагентам</value>
+  </explanation>
+  <resources uuid="f716bd61-27b3-47a8-8593-cee02cc56713">
+    <name>Количество</name>
+    <synonym>
+      <key>ru</key>
+      <value>Количество</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+      </numberQualifiers>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <resources uuid="473033dc-ce0d-48bc-9d9e-16943ec79e66">
+    <name>Сумма</name>
+    <synonym>
+      <key>ru</key>
+      <value>Сумма</value>
+    </synonym>
+    <type>
+      <types>Number</types>
+      <numberQualifiers>
+        <precision>10</precision>
+        <scale>2</scale>
+        <nonNegative>true</nonNegative>
+      </numberQualifiers>
+    </type>
+    <toolTip>
+      <key>ru</key>
+      <value>Сумма по товару</value>
+    </toolTip>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fillChecking>ShowError</fillChecking>
+    <fullTextSearch>Use</fullTextSearch>
+  </resources>
+  <dimensions uuid="1c9f8070-816f-409c-a238-92922185052d">
+    <name>Покупатель</name>
+    <synonym>
+      <key>ru</key>
+      <value>Покупатель</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Контрагенты</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+  <dimensions uuid="b18c1fd3-7115-4665-8773-1038982cd6ee">
+    <name>Товар</name>
+    <synonym>
+      <key>ru</key>
+      <value>Товар</value>
+    </synonym>
+    <type>
+      <types>CatalogRef.Товары</types>
+    </type>
+    <minValue xsi:type="core:UndefinedValue"/>
+    <maxValue xsi:type="core:UndefinedValue"/>
+    <fullTextSearch>Use</fullTextSearch>
+    <useInTotals>true</useInTotals>
+  </dimensions>
+</mdclass:AccumulationRegister>
